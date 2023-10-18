@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+	int mid,l,h,i,n,num,arr[100];
+	printf("Enter the no of elements");
+	scanf("%d",&n);
+	printf("Enter the number");
+	scanf("%d",&num);
+	l=0;
+	h=n-1;
+	
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
+	}
+	
+		while(l<=h){
+			
+		mid=(l+h)/2;
+		
+		if(arr[mid]==num){
+			printf("%d",mid+1);
+			break;
+			
+		}
+		else if(arr[mid]<num){
+			l=mid+1;
+		}
+		else{
+			h=mid-1;
+			mid=(l+h)/2;
+		}
+	}
+
+}
